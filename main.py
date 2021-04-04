@@ -19,22 +19,55 @@ def sg():
   f=input()
   if f=="1":
      print("Поздровляю вы Маг")
-     print("    ")
-     power=40
-     HP=200
-     superpower=0
+     randompower = 60
+     critpower = 70
+     critchance = 4
+     power = 40
+     HP = 200
+     superpower = 0
+     deffense = 0
+     lvl = 0
+     XP = 0
+     dificult = ""
+     location = ""
+     kolichestvo = 0
+     sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
+                    " стену солнечных лучей ", " серьёзный разрез "]
+
   if f=="2":
      print("Поздровляю вы Воин")
-     print("    ")
-     power=20
-     HP=250
-     superpower=0
+     randompower = 30
+     critpower = 60
+     critchance = 13
+     power = 20
+     HP = 250
+     superpower = 0
+     deffense = 0
+     lvl = 0
+     XP = 0
+     dificult = ""
+     location = ""
+     kolichestvo = 0
+     sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
+                    " стену солнечных лучей ", " серьёзный разрез "]
+
   if f=="3":
      print("Поздровляю вы Эльф")
-     print("    ")
-     power=30
-     HP=150
-     superpower=0
+     randompower = 40
+     critpower = 30
+     critchance = 5
+     power = 30
+     HP = 150
+     superpower = 0
+     deffense = 0
+     lvl = 0
+     XP = 0
+     dificult = ""
+     location = ""
+     kolichestvo = 0
+     sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
+                    " стену солнечных лучей ", " серьёзный разрез "]
+
 
 def location():
 
