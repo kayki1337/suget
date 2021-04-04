@@ -32,19 +32,25 @@ class Monstr:
 
 
 
+
+
+
+
+
+
 def draka(hero,monstr):
     kolicheastvo=0
     while True:
         if hero.HP <=0:
             print("Поздровляю ты здох")
-            return False
+            return True
         if monstr.HP <=0:
             print("Поздровляю ты его кокнул")
             onePersent = hero.HP /100
             hero.HP += 40*onePersent
             print("После битвы вы отхилились и у вас "+ str(hero.HP ))
             print("было восстановлено "+ str( onePersent*40 ))
-            return True
+            return False
 
         monstr_zashita = str(random.randint(1, 3))
         monstr_ataka = str(random.randint(1, 3))
@@ -70,10 +76,9 @@ def draka(hero,monstr):
 
         if kolicheastvo ==hero.kolichestvo:
             kolicheastvo=0
-            print(hero.kolichestvo)
             yron = random.randint(25, 100)
             monstr.HP -= yron
-            print(hero.sposobnosti+" Который снес монстру "+str(yron))
+            print(hero.sposobnosti[random.randint(0,6)]+" Который снес монстру "+str(yron))
 
 
 

@@ -1,12 +1,8 @@
 from brick import Brick
-power=0
-HP=0
-superpower=0
-deffense=0
-lvl=0
-XP=0
-dificult=""
-location=""
+from Objects import Hero
+
+
+hero = Hero()
 def sg():
   print("выберите героя:")
   print("Маг:Урон-40,Жизни-200,Сбособность: Призывать воинов (жизни-50 Урон-30 способности:нет)")
@@ -19,53 +15,53 @@ def sg():
   f=input()
   if f=="1":
      print("Поздровляю вы Маг")
-     randompower = 60
-     critpower = 70
-     critchance = 4
-     power = 40
-     HP = 200
-     superpower = 0
-     deffense = 0
-     lvl = 0
-     XP = 0
-     dificult = ""
-     location = ""
-     kolichestvo = 0
-     sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
+     hero.randompower = 60
+     hero.critpower = 70
+     hero. critchance = 4
+     hero.power = 40
+     hero. HP = 800
+     hero. superpower = 0
+     hero.deffense = 0
+     hero.  lvl = 0
+     hero. XP = 0
+     hero. dificult = ""
+     hero. location = ""
+     hero. kolichestvo = 0
+     hero. sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
                     " стену солнечных лучей ", " серьёзный разрез "]
 
   if f=="2":
      print("Поздровляю вы Воин")
-     randompower = 30
-     critpower = 60
-     critchance = 13
-     power = 20
-     HP = 250
-     superpower = 0
-     deffense = 0
-     lvl = 0
-     XP = 0
-     dificult = ""
-     location = ""
-     kolichestvo = 0
-     sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
+     hero.randompower = 30
+     hero.  critpower = 60
+     hero.critchance = 13
+     hero.  power = 20
+     hero. HP = 250
+     hero. superpower = 0
+     hero.  deffense = 0
+     hero.lvl = 0
+     hero. XP = 0
+     hero. dificult = ""
+     hero. location = ""
+     hero. kolichestvo = 0
+     hero.  sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
                     " стену солнечных лучей ", " серьёзный разрез "]
 
   if f=="3":
-     print("Поздровляю вы Эльф")
-     randompower = 40
-     critpower = 30
-     critchance = 5
-     power = 30
-     HP = 150
-     superpower = 0
-     deffense = 0
-     lvl = 0
-     XP = 0
-     dificult = ""
-     location = ""
-     kolichestvo = 0
-     sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
+     hero.print("Поздровляю вы Эльф")
+     hero.hero. randompower = 40
+     hero.critpower = 30
+     hero.critchance = 5
+     hero.power = 30
+     hero.HP = 150
+     hero.superpower = 0
+     hero.deffense = 0
+     hero.lvl = 0
+     hero.XP = 0
+     hero.dificult = ""
+     hero.location = ""
+     hero.kolichestvo = 0
+     hero.sposobnosti = [" Огненный шар ", " дождь из лазера ", " електро удар ", " игловый разрез ",
                     " стену солнечных лучей ", " серьёзный разрез "]
 
 
@@ -81,7 +77,7 @@ def location():
     if g =="1":
         location="Кирпичная деревня"
         print("Вы выбрали Кирпичную деревню")
-        Brick()
+        Brick(hero)
     if g == "2":
         location = "Золотая ограда"
         print("Вы выбрали Золотую ограду")

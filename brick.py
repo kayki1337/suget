@@ -1,5 +1,20 @@
+from Objects import draka,Monstr
 
-def Brick ():
+#p1_1 = лево
+#p2_1 = право
+gul = Monstr()
+
+gul.randompower = 30
+gul.critpower = 80
+gul.critchance = 19
+gul.power = 60
+gul.HP = 200
+gul.superpower = 0
+
+
+
+
+def Brick (hero):
     print("Добро Пожаловать в Кирпичную деревню")
     print("К вам подошёл местный житель С квестом и предлогает:")
     print("Найти 1 железо")
@@ -11,20 +26,23 @@ def Brick ():
     print("Куда пойти: \n 1 - Пещера 2 - Таверна")
     if input()=="1":
         print("Вы выбрали пещеру")
-        Peshera()
+        Peshera(hero)
     else:
         print("Вы выбрали Тавену")
-        Taverna()
-def Taverna():
+        Taverna(hero)
+def Taverna(hero):
     pass
 
-def Peshera():
+def Peshera(hero):
     print("Куда пойдёшь \n 1 - На право 2 - на лево ")
     if input() == "1":
         print("Вы выбрали на право")
 
         print("Эпичная Музычка")
-        #todo драка
+        isPererojdenie = draka(hero,gul)
+        if isPererojdenie == True:
+            Brick(hero)
+
     else:
         print("Вы выбрали на лево")
         print("Перед вами золото: \n 1 - Добыть 2 - Оставить")
@@ -33,30 +51,33 @@ def Peshera():
             #todo Сумка+1
         else:
             print("Вы отказались")
+
+        gul = Monstr()
+
+        gul.randompower = 30
+        gul.critpower = 80
+        gul.critchance = 19
+        gul.power = 60
+        gul.HP = 200
+        gul.superpower = 0
+        levo(hero,gul,"zoloto")
         # todo драка
-        print("Куда пойдёшь \n 1 - Вперёд  2 - на лево ")
-        if input() == "1":
-            print("Вы выбрали Вперёд")
-        else:
-            print("Вы Выбрали на лево")
-
-        print("Куда пойдёшь \n 1 - На право  2 - Вперёд ")
-        if input() == "1":
-            print("Вы выбрали Вперёд")
-            #todo Сумка + 3
-        else:
-            print("Вы Выбрали на право")
-
-            print("Куда пойдёшь \n 1 - На право  2 - Вперёд ")
-        if input() == "1":
-            print("Вы выбрали Вперёд")
-        #todo драка
-        else:
-            print("Вы Выбрали на право")
-        #todo Драка
-        print("Куда пойдёшь \n 1 - На право  2 - Вперёд ")
-        if input() == "1":
-            print("Вы выбрали Вперёд")
+def levo(hero,monstr,item):
+    print("Вы выбрали на лево")
 
 
 
+
+
+    print("Куда пойдёшь \n 1 - Вперёд  2 - на лево ")
+
+def pravo(hero,monstr,item):
+    print("Вы выбрали на право")
+
+
+
+def pryamo(hero,monstr,item):
+
+
+    print("Куда пойдёшь \n 1 - Вперёд  2 - на лево ")
+    print("Вы выбрали вперед")
